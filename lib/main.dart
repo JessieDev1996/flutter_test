@@ -44,6 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 food.name,
                 style: TextStyle(fontSize: 30),
               ),
+              subtitle: Text(
+                "ราคา " + food.price,
+                style: TextStyle(fontSize: 20),
+              ),
+              onTap: (() {
+                print("คุณเลือกเมนูอาหารชื่อว่า  =" + food.name);
+              }),
             );
           }),
       floatingActionButton: FloatingActionButton(
