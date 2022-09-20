@@ -51,7 +51,12 @@ class _MyHomePageState extends State<MyHomePage> {
                     "ยอดคงเหลือ",
                     style: TextStyle(fontSize: 30),
                   ),
-                  Text("15000")
+                  Expanded(
+                      child: Text(
+                    "15000",
+                    style: TextStyle(fontSize: 30),
+                    textAlign: TextAlign.right,
+                  ))
                 ],
                 crossAxisAlignment: CrossAxisAlignment.start,
               ),
