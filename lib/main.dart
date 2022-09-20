@@ -21,6 +21,8 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+// class _MyHomePageState extends State<MyHomePage> {
+
 class _MyHomePageState extends State<MyHomePage> {
   List<FoodMenu> menu = [
     FoodMenu("กุ้งเผา", "500", "assets/images/picture1.jpg"),
@@ -32,31 +34,25 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Hello FLutter ครับ"),
+        title: Text("บัญชีของฉัน"),
       ),
-      body: ListView.builder(
-          itemCount: menu.length,
-          itemBuilder: (BuildContext context, index) {
-            FoodMenu food = menu[index];
-            return ListTile(
-              leading: Image.asset(food.img),
-              title: Text(
-                food.name,
-                style: TextStyle(fontSize: 30),
-              ),
-              subtitle: Text(
-                "ราคา " + food.price,
-                style: TextStyle(fontSize: 20),
-              ),
-              onTap: (() {
-                print("คุณเลือกเมนูอาหารชื่อว่า  =" + food.name);
-              }),
-            );
-          }),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (() {}),
-        child: Icon(Icons.add),
-      ),
+      body: Column(children: [
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.red, borderRadius: BorderRadius.circular(10)),
+          height: 100,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.green, borderRadius: BorderRadius.circular(10)),
+          height: 100,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+          height: 100,
+        )
+      ]),
     );
   }
 
