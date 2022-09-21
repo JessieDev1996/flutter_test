@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/MoneyBox.dart';
 import 'FoodMenu.dart';
 
 void main() {
@@ -39,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(children: [
+          MoneyBox("ยอดคงเหลือ", 10000, Colors.lightBlue, 120),
           Container(
             decoration: BoxDecoration(
                 color: Colors.red, borderRadius: BorderRadius.circular(10)),
@@ -61,6 +63,9 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
               ),
             ),
+          ),
+          SizedBox(
+            height: 20,
           ),
           Container(
             decoration: BoxDecoration(
