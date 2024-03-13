@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/MoneyBox.dart';
-import 'package:intl/intl.dart';
+// import 'package:intl/intl.dart';
 import 'FoodMenu.dart';
 
 void main() {
@@ -26,6 +26,12 @@ class MyHomePage extends StatefulWidget {
 // class _MyHomePageState extends State<MyHomePage> {
 
 class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    super.initState();
+    print("เรียกใช้ initstate");
+  }
+
   List<FoodMenu> menu = [
     FoodMenu("กุ้งเผา", "500", "assets/images/picture1.jpg"),
     FoodMenu("กระเพราหมู", "80", "assets/images/picture2.jpg"),
@@ -34,6 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int number = 0;
   @override
   Widget build(BuildContext context) {
+    print("เรียกใช้ Build");
     return Scaffold(
       appBar: AppBar(
         title: Text("บัญชีของฉัน"),
@@ -41,6 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(children: [
+          Text(number.toString(), style: TextStyle(fontSize: 30)),
           MoneyBox("ยอดคงเหลือ", 10000.41, Colors.lightBlue, 120),
           Container(
             decoration: BoxDecoration(
@@ -49,6 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
+                // ignore: sort_child_properties_last
                 children: [
                   Text(
                     "ยอดคงเหลือ",
@@ -56,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                   Expanded(
                       child: Text(
-                    '${NumberFormat("#,###.####").format(1000.12451)}',
+                    '123',
                     style: TextStyle(fontSize: 30),
                     textAlign: TextAlign.right,
                   ))
@@ -79,6 +88,14 @@ class _MyHomePageState extends State<MyHomePage> {
             height: 100,
           )
         ]),
+      ),
+      floatingActionButton: FloatingActionButton( 
+        onPressed: (() {
+          setState(() {
+            number++;
+          });
+        }),
+        child: Icon(Icons.add),
       ),
     );
   }

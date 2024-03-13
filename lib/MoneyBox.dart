@@ -18,6 +18,7 @@ class MoneyBox extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
+          // ignore: sort_child_properties_last
           children: [
             Text(
               title,
