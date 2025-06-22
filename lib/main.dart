@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "My App",
       home: MyHomePage(),
-      theme: ThemeData(primarySwatch: Colors.blue),
+      // Update the theme to a lighter blue shade
+      theme: ThemeData(primarySwatch: Colors.lightBlue),
     );
   }
 }
@@ -52,7 +53,9 @@ class _MyHomePageState extends State<MyHomePage> {
           MoneyBox("ยอดคงเหลือ", 10000.41, Colors.lightBlue, 120),
           Container(
             decoration: BoxDecoration(
-                color: Colors.red, borderRadius: BorderRadius.circular(10)),
+                // Use a pleasant blue tone instead of red
+                color: Colors.lightBlue,
+                borderRadius: BorderRadius.circular(10)),
             height: 100,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -79,12 +82,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Container(
             decoration: BoxDecoration(
-                color: Colors.green, borderRadius: BorderRadius.circular(10)),
+                // Replace green with a consistent blue shade
+                color: Colors.lightBlueAccent,
+                borderRadius: BorderRadius.circular(10)),
             height: 100,
           ),
           Container(
             decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+                // Slightly brighter blue box
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(10)),
             height: 100,
           )
         ]),
