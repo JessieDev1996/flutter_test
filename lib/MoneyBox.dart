@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 class MoneyBox extends StatelessWidget {
   String title = ""; // ชื่อหมวดหมู่/รายการ
   double amount = 0; //จำนวนเงิน
-  Color color = Colors.red; //สีของกล่อง
+  // Default to a pleasant blue tone
+  Color color = Colors.lightBlue; //สีของกล่อง
   double size = 0; //ขนาดของกล่อง
 
   MoneyBox(this.title, this.amount, this.color, this.size);
