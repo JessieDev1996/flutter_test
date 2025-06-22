@@ -89,20 +89,20 @@ class _MyHomePageState extends State<MyHomePage> {
           )
         ]),
       ),
-      floatingActionButton: FloatingActionButton( 
+      floatingActionButton: FloatingActionButton(
         onPressed: (() {
           setState(() {
-            number++;
+            number--;
           });
         }),
-        child: Icon(Icons.add),
+        child: Icon(Icons.remove),
       ),
     );
   }
 
   List<Widget> getData(int count) {
     List<Widget> data = [];
-    data.add(Text("กดปุ่มเพื่อเพิ่มจำนวนเลข"));
+    data.add(Text("กดปุ่มเพื่อลดจำนวนเลข"));
     data.add(Text(
       number.toString(),
       style: TextStyle(fontSize: 60),
